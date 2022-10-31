@@ -14,14 +14,10 @@
 
 using namespace sf;
 
-int TILE_SIZE = 20;
 unsigned int score = 0;
 unsigned int lives = 3;
 unsigned int pellet_count = 230;
 
-// variables that controller the numbers 
-// of map elements being pushed in the their
-// respectives vectors
 
 unsigned int pellet_limiter = 0;
 unsigned int power_limiter = 0;
@@ -409,26 +405,6 @@ int main()
 			edible_collision(PAC_MAN);
 
 		Vector2f red_position = red.getPosition();
-		/*
-		if(!paused && start)
-		{
-		
-
-		
-			if (ghost_direction == 0) // right
-			{
-				red.setPosition(red_position.x + GHOST_SPEED, red_position.y + 0 );
-			}
-			else if (ghost_direction == 1) // left
-			{
-				red.setPosition(red_position.x - GHOST_SPEED, red_position.y + 0 );
-			}
-		}*/
-		/*
-		if (power)
-		{
-			power = false;
-		}*/
 		
 		
 		if(paused)
@@ -539,17 +515,6 @@ void ghost_collision(Sprite &pac, Sprite &ghost, char color)
 		ghost.setPosition(52,696);
 	}	
 }
-/*
-unsigned int ghost_path(Sprite &ghost, Vector2f &pos, int random, char direction)
-{
-	if (random == 0)
-	{
-		if (wall_collision(ghost, pos, 'r'))
-			return rand % 4;
-		
-	}
-}*/
-
 
 
 			
